@@ -38,3 +38,5 @@ require("lazy").setup({
 
 require("config.keymaps")
 require("mini.pairs").setup()
+require("mini.starter").setup()
+require("colorizer").setup()
