@@ -72,7 +72,25 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 vim.opt.termguicolors = true
-vim.opt.background = "dark"
+
+vim.o.foldenable = true
+vim.o.foldlevel = 99
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "v:lua.vim.lsp.foldexpr()"
+vim.o.foldtext = ""
+vim.opt.foldcolumn = "0"
+vim.opt.fillchars:append({ fold = " " })
+
+-- vim.o.fillchars = "eob: ,fold: ,foldopen:,foldsep: ,foldclose:"
+-- vim.o.foldcolumn = "1"
+-- vim.o.foldenable = true
+-- vim.o.foldexpr = "v:lua.vim.lsp.foldexpr()"
+-- vim.o.foldlevel = 99
+-- vim.o.foldlevelstart = 99
+-- vim.o.foldmethod = "expr"
+
+vim.g.mkdp_browser = "/Applications/Chromium.app/Contents/MacOS/Chromium"
+vim.g.mkdp_theme = "dark"
 
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s)

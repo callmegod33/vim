@@ -17,3 +17,10 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank()
 	end,
 })
+
+vim.keymap.set("n", "<Left>", function()
+	require("origami").h()
+end)
+vim.keymap.set("n", "<Right>", function()
+	require("origami").l()
+end)
