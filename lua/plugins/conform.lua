@@ -15,12 +15,12 @@ return {
 		formatters = {
 			clang_format = {
 				command = "clang-format",
-				args = { "--style=Google" },
+				args = { "--style=Microsoft" },
 			},
 		},
 		format_on_save = {
 			timeout_ms = 500,
 			lsp_format = "fallback",
-		}
+		},
 	},
 }
