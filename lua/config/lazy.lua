@@ -31,12 +31,11 @@ require("lazy").setup({
 	},
 	-- Configure any other settings here. See the documentation for more details.
 	-- colorscheme that will be used when installing plugins.
-	install = { colorscheme = { "rose-pine" } },
+	install = { colorscheme = { "darkvoid" } },
 	-- automatically check for plugin updates
 	checker = { enabled = true, notify = false },
 })
 
 require("config.keymaps")
 require("mini.pairs").setup()
-require("mini.starter").setup()
 require("colorizer").setup()
