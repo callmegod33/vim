@@ -42,6 +42,8 @@ vim.opt.scrolloff = 8
 
 vim.opt.termguicolors = true
 
+vim.opt.colorcolumn = "80"
+
 -- vim.o.foldenable = true
 -- vim.o.foldlevel = 99
 -- vim.o.foldmethod = "expr"
