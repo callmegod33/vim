@@ -6,97 +6,122 @@ return {
 	-- dependencies = { "echasnovski/mini.icons" },
 	opts = {},
 
+	config = function()
+		require("fzf-lua").setup({
+				-- local map = function(keys, func, desc, mode)
+				-- 	mode = mode or "n"
+				-- 	vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
+				-- end,
+			-- lsp = {
+			-- 	async_or_timeout = 5000,
+			-- 	code_actions = false, -- disable fzf-lua LSP code actions
+			-- },
+
+			vim.keymap.set("n", "<leader>D", function()
+				vim.lsp_typedefs()
+			end, { desc = "type def" }),
+
+			vim.keymap.set("n", "<leader>ds", function()
+				vim.lsp_document_symbols()
+			end, { desc = "doc symbols" }),
+
+			vim.keymap.set("n", "<leader>ws", function()
+				vim.lsp_live_workspace_symbols()
+			end, { desc = "worksapce symbols" }),
+		})
+	end,
+
 	keys = {
 		{
 			"<leader>ff",
 			function()
 				require("fzf-lua").files()
 			end,
-			desc = "[F]ind [F]iles in project directory",
+			desc = "find files in project dir",
 		},
 		{
 			"<leader>fg",
 			function()
 				require("fzf-lua").live_grep()
 			end,
-			desc = "[F]ind by [G]repping project directory",
+			desc = "grep project dir",
 		},
 		{
 			"<leader>fc",
 			function()
 				require("fzf-lua").files({ cwd = vim.fn.stdpath("config") })
 			end,
-			desc = "[F]ind in neovim [C]onfiguration",
+			desc = "find in neovim configuration",
 		},
 		{
 			"<leader>fh",
 			function()
 				require("fzf-lua").helptags()
 			end,
-			desc = "[F]ind [H]elp",
+			desc = "find help",
 		},
 		{
 			"<leader>fk",
 			function()
 				require("fzf-lua").keymaps()
 			end,
-			desc = "[F]ind [K]eymaps",
+			desc = "find keymaps",
 		},
 		{
 			"<leader>fb",
 			function()
 				require("fzf-lua").builtin()
 			end,
-			desc = "[F]ind [B]uiltin FZF",
+			desc = "find builtin FZF",
 		},
 		{
 			"<leader>fw",
 			function()
 				require("fzf-lua").grep_cword()
 			end,
-			desc = "[F]ind current [W]ord",
+			desc = "find current word",
 		},
 		{
 			"<leader>fW",
 			function()
 				require("fzf-lua").grep_cWORD()
 			end,
-			desc = "[F]ind current [W]ORD",
+			desc = "find current WORD",
 		},
 		{
 			"<leader>fd",
 			function()
 				require("fzf-lua").diagnostics_document()
 			end,
-			desc = "[F]ind [D]iagnostics",
+			desc = "find diagnostics",
 		},
 		{
 			"<leader>fr",
 			function()
 				require("fzf-lua").resume()
 			end,
-			desc = "[F]ind [R]esume",
+			desc = "find resume",
 		},
 		{
 			"<leader>fo",
 			function()
 				require("fzf-lua").oldfiles()
 			end,
-			desc = "[F]ind [O]ld Files",
+			desc = "find old Files",
 		},
 		{
 			"<leader><leader>",
 			function()
 				require("fzf-lua").buffers()
 			end,
-			desc = "[ ] Find existing buffers",
+			desc = "[ ] find existing buffers",
 		},
 		{
 			"<leader>/",
 			function()
 				require("fzf-lua").lgrep_curbuf()
 			end,
-			desc = "[/] Live grep the current buffer",
+			desc = "live grep current buffer",
 		},
 	},
 }

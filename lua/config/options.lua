@@ -22,8 +22,8 @@ vim.opt.updatetime = 50
 
 vim.opt.timeoutlen = 300
 
--- vim.opt.list = true
--- vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+vim.opt.list = true
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
@@ -51,5 +51,6 @@ vim.opt.colorcolumn = "80"
 -- vim.o.foldtext = ""
 -- vim.opt.foldcolumn = "0"
 -- vim.opt.fillchars:append({ fold = " " })
+
 
 vim.opt.confirm = true
