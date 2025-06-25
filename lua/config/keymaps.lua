@@ -22,7 +22,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 vim.keymap.set("n", "K", function()
-	vim.lsp.buf.hover({ border = "single", max_height = 25, max_width = 120 })
+	vim.lsp.buf.hover({ border = "rounded", max_height = 25, max_width = 120 })
 end)
 
 local autocmd = vim.api.nvim_create_autocmd

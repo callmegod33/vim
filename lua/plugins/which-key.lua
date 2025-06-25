@@ -6,6 +6,7 @@ return {
 		-- or leave it empty to use the default settings
 		-- refer to the configuration section below
 	},
+
 	keys = {
 		{
 			"<leader>?",
@@ -15,4 +16,11 @@ return {
 			desc = "buffer local keymaps",
 		},
 	},
+	config = function()
+		require("which-key").setup({
+			win = {
+				border = "rounded",
+			},
+		})
+	end,
 }
