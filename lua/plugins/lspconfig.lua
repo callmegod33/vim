@@ -138,7 +138,7 @@ return {
 		-- See :help vim.diagnostic.Opts
 		vim.diagnostic.config({
 			severity_sort = true,
-			float = { border = "rounded", source = "if_many" },
+			float = { border = "rounded", source = "if_many", bg = "#000000" },
 			underline = { severity = vim.diagnostic.severity.ERROR },
 			signs = {
 				text = {
@@ -243,6 +243,9 @@ return {
 					require("lspconfig")[server_name].setup(server)
 				end,
 			},
+		})
+		require("mason").setup({
+			ui = { border = "rounded" },
 		})
 	end,
 }
