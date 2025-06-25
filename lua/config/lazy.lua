@@ -38,4 +38,3 @@ require("lazy").setup({
 })
 
 require("config.keymaps")
-require("plugins.mini-pairs")
