@@ -138,7 +138,7 @@ return {
 		-- See :help vim.diagnostic.Opts
 		vim.diagnostic.config({
 			severity_sort = true,
-			float = { border = "rounded", source = "if_many" },
+			float = { border = "rounded", source = "if_many", bg = "#000000" },
 			underline = { severity = vim.diagnostic.severity.ERROR },
 			signs = {
 				text = {
@@ -181,7 +181,9 @@ return {
 		--  - settings (table): Override the default settings passed when initializing the server.
 		--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 		local servers = {
-			clangd = {},
+			clangd = {
+				cmd = { "clangd", "--header-insertion=never" },
+			},
 			bashls = {},
 			-- gopls = {},
 			pyright = {},
@@ -243,6 +245,9 @@ return {
 					require("lspconfig")[server_name].setup(server)
 				end,
 			},
+		})
+		require("mason").setup({
+			ui = { border = "rounded" },
 		})
 	end,
 }

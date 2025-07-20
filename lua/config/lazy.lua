@@ -34,8 +34,7 @@ require("lazy").setup({
 	install = { colorscheme = { "rose-pine" } },
 	-- automatically check for plugin updates
 	checker = { enabled = true, notify = false },
+	ui = { border = "rounded" },
 })
 
 require("config.keymaps")
-require("mini.pairs").setup()
-require("colorizer").setup()

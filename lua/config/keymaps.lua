@@ -1,8 +1,6 @@
 local augroup = vim.api.nvim_create_augroup
 local MyGroup = augroup("MyGroup", {})
 
-vim.keymap.set("n", "-", "<cmd>Oil --float<CR>", { desc = "oil back" })
-
 vim.keymap.set("n", "gl", function()
 	vim.diagnostic.open_float()
 end, { desc = "open diagnostic in float" })
@@ -22,7 +20,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 vim.keymap.set("n", "K", function()
-	vim.lsp.buf.hover({ border = "single", max_height = 25, max_width = 120 })
+	vim.lsp.buf.hover({ border = "rounded", max_height = 25, max_width = 120 })
 end)
 
 local autocmd = vim.api.nvim_create_autocmd
