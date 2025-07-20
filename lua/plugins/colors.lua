@@ -2,8 +2,8 @@ function ColorMyPencils(color)
 	color = color or "rose-pine-moon"
 	vim.cmd.colorscheme(color)
 
-        vim.cmd([[highlight! link WhichKeyBorder FloatBorder]])
-        vim.cmd([[highlight! link FzfLuaBorder   FloatBorder]])
+	vim.cmd([[highlight! link WhichKeyBorder FloatBorder]])
+	vim.cmd([[highlight! link FzfLuaBorder   FloatBorder]])
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#000000" })

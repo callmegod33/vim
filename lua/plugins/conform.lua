@@ -10,7 +10,7 @@ return {
 		formatters = {
 			clang_format = {
 				command = "clang-format",
-				args = { "--style=Microsoft" },
+				args = { "--style=Microsoft" }
 			},
 		},
 	},
